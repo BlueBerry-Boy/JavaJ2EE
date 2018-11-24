@@ -1,0 +1,119 @@
+UNIX/LINUX:
+-----------------
+-----------------
+operating System:An operating system (OS) is a set of programs that manage computer hardware resources and provide common services for application software. 
+
+Windows: GUI
+UNIX/LINUX: character user interface/command line
+
+-------------------
+-------------------
+UNIX:
+Unix operating systems are widely used in servers, workstations, and mobile devices. The Unix environment and the client–server program model were essential elements in the development of the Internet and the reshaping of computing as centered in networks rather than in individual computers.
+EG: Flavors of unix :SUN-SOLARIS: (AT&T, VERIZON,) IBM-AIX, HP-UX
+
+LINUX:
+Linux is a Unix-like computer operating system assembled under the model of free and open source software development and distribution.
+EG:REDHAT Enterprise linux - open source
+------------------------
+------------------------
+can use cygwin, putty, or telnet -- tools to connect to linux server
+refer:  putty download install.pdf
+------------------------
+------------------------
+Tester role:
+If server is down, start server
+Login to the server, go to dir, check if server is up.
+If server is down, run script file and check the log file for error messages.
+Any error messages, email(through ftp) them to concerned person
+You need to know:  How to login, go to specific dir, create small files, view the files, check the process, copy files from unix to windows os
+Commands are common for all unix/linux platforms 
+
+------------------------------
+------------------------------
+linux Commands:
+
+ls: list the file names
+ls -ltr: list the file names with details
+mkdir <directory name>: to create the new directory/folder
+cd <directory name > : change the directory
+clear: clears the screen
+pwd: present working directory
+cat><filename>: creates a new file and starts editing
+cat>><filename>: continues editting in same file
+cat <filename>: displays contents of file
+ctrl+d:  stops editting
+touch <filename> : creates empty file
+man <command>: gets the help for commands
+who: lists the users connected to linux server currently
+who am i: gives the current login user
+cd../ : return to root dir
+find / -name *.log: finds the files with extensio as .log
+find / -name <filename>
+grep: to search for specific content
+ps: display current activities
+kill -9 <pid>: kills the process with process id
+ps -ef | grep cat : lists the processes with cat command
+man kill
+
+
+Before Editing a file [ sudo chmod u+rw 'filename']
+sudo vi 'filename'
+
+Editing a file:
+vi 'filename'
+press i to start editing
+
+when done with editing press ESC
+then pres :  (shift ;)
+then press wq to save and quit
+or q! to exit without saving changes
+
+
+
+
+performance tester:
+top: to see cpu/memory utilization for each process
+vmstat: gives the performance of server
+--------------------------------------
+--------------------------------------
+File Transfer Protocol: FTP
+
+log files: gives the lists of users connected to server and processes run by them
+
+FTP: use ftp to Copy from unix to windows and send to developer.
+ftp server: winxcp, filezilla, winftp
+
+-----------------------------------
+-----------------------------------
+filezilla:
+downlaod filezilla client from: http://filezilla-project.org/
+host: m-net.arbornet.org
+username: h2kunix6
+pass:h2kunix6
+
+to find the IP address
+cmd.exe:
+ping m-net.arbornet.org
+ftp <IPaddress>:connects to ftp
+ -----------------------------------------
+------------------------------------------
+
+how to run shelll scripts:
+group of commands and logic written in a file usually with extension .sh or .ksh
+
+cat>start.sh
+hello server
+
+cat>start.sh
+echo "sever started successfully"
+
+chmod 777 start.sh : gives read,write and executable permissions to start.sh
+
+./start.sh : execute the shell script file
+
+man chmod
+
+
+
+
