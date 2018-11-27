@@ -24,6 +24,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 			
 			System.out.println(driver.getCurrentUrl());
 			
-			
+			driver.close();
 		}
 	}

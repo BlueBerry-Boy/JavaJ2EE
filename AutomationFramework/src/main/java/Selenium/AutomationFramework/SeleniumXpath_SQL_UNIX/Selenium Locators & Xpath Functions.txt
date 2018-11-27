@@ -106,7 +106,7 @@ Identification of Objects/WebElements/HTML Components can be done in 8 ways: (or
 	WebElement e =driver.findElement(By.linkText("Sign In"))
         e.click();
 
-6. partialLinkText(hyperlink) for dynamic links where the text is keep on changing. So we use the static part.
+6. partialLinkText(hyperlink) for dynamic links where the text keeps on changing. So we use the static part.
 	WebElement e =driver.findElement(By.linkText("Sign"))
         e.click();
 		
@@ -116,7 +116,7 @@ Identification of Objects/WebElements/HTML Components can be done in 8 ways: (or
 7. xpath-> html path -
 
    xpath - > xml path
-             hmtl path
+             html path
 
 8. cssSelector
 
