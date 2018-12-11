@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Suite" parallel= "classes" thread-count= "2" >
+<test name="firefox Parallel Test" preserve-order = "true">
+<parameter name = "browser" value="firefox"></parameter>
+    <classes>
+      <class name="selenium.automationFramework.fireFoxdriver.Firefxdriver"/>
+      <class name="selenium.automationFramework.chromedriver.Chromedriver"/>
+    </classes>
+ </test>
+  <test name=" Chrome Parallel Test">
+  <parameter name = "browser" value="chrome"></parameter>
+    <classes>
+      
+    </classes>
+ </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
