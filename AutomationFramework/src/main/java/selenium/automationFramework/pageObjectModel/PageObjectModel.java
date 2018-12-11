@@ -38,7 +38,6 @@ import org.openqa.selenium.WebElement;
 			return element;
 		}
 
-		
 		/**
 		 * Fills the destinationTextBox
 		 * @param driver 
@@ -62,6 +61,16 @@ import org.openqa.selenium.WebElement;
 		}
 
 		/**
+		 * Fills the departure date Text
+		 * @param DepartureDate
+		 */
+		public static void fillDepartureDateTextBox(WebDriver driver, String DepartureDate ) {
+			element = departureDateTextBox(driver);
+			element.sendKeys(DepartureDate);
+			
+		}
+		
+		/**
 		 * Returns the return date text box element
 		 * @param driver
 		 * @return
@@ -71,6 +80,8 @@ import org.openqa.selenium.WebElement;
 			return element;
 		}
 
+		
+		
 		/**
 		 * Returns the search button box element
 		 * @param driver
