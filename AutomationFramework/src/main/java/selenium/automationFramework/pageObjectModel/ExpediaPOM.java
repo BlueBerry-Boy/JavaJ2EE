@@ -21,6 +21,7 @@ import selenium.automationFramework.pageObjectModel.PageObjectModel;
 	public void beforeClass() {
 		driver = new FirefoxDriver();
 		baseUrl = "https://www.expedia.com/";
+		
 
 		// Maximize the browser's window
 		driver.manage().window().maximize();
