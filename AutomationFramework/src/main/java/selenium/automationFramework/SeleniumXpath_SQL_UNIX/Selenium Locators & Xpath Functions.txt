@@ -6,10 +6,9 @@ b. IDE-Integrated dev environment mainly used for record and playback on FF brow
 c. WebDriver
 d. Grid
 
-WebDriver - 2 weeks
-Testng   - 1week
-Live Project - 2 days
-Grid - 1 day
+WebDriver
+Testng    
+Grid
 
 
 webDriver:
@@ -30,7 +29,7 @@ Selenium API ->http://selenium.googlecode.com/git/docs/api/java/index.html
 
 Package ->org.openqa.selenium
 
-Compatibility-> the selenium-java-2.46.jar should be compatible with latest version of ff 38.0
+
 
 
 TC_001:Verifying the title of page
@@ -124,7 +123,7 @@ Identification of Objects/WebElements/HTML Components can be done in 8 ways: (or
 Difference between close() and quit()
 ----------------------------------------
 driver.close()-> closes the browser which has focus Ex:LoginPage.html
-driver.quit()->closes all the browser opened by webdriver Ex: LoginPage,Singin
+driver.quit()->closes all the browser opened by webdriver Ex: LoginPage,SignIn
 
 --------------------------------------------------------------------------
  
