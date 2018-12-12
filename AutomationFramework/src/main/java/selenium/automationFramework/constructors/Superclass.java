@@ -1,4 +1,4 @@
-package Selenium.AutomationFramework.constructors;
+package selenium.automationFramework.constructors;
 
 public class Superclass {
 
