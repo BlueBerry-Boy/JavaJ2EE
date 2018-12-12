@@ -81,6 +81,16 @@ import org.openqa.selenium.WebElement;
 		}
 
 		
+		/**
+		 * Fills the Return Date text Box Element
+		 * 
+		 */
+		public static void fillReturnDateTextBox(WebDriver driver, String ReturnDate) {
+			element = returnDateTextBox(driver);
+			element.sendKeys(ReturnDate);
+		}
+		
+		
 		
 		/**
 		 * Returns the search button box element
