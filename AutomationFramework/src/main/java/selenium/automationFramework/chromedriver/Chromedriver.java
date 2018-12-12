@@ -8,26 +8,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-	//open Walgreens.com in chrome browser
-	//click login button, enter username & password
-	// capture the screenshot
-
-
 		public class Chromedriver {
 
 			WebDriver driver;
 			
+/**
+ * Or Use local path in pc folders:
+ * System.setProperty("webdriver.chrome.driver","/Users/path/Documents/path/libs/chromedriver");
+ * 			
+ */
+			
 			@Test
 			public void setup() {
-				
+						
 				File f = new File("chromedriver.exe");
-			    System.setProperty("webdriver.chrome.driver",f.getAbsolutePath()); 
-			    
-		     /**
-		       * or use:
-		       * System.setProperty("webdriver.chrome.driver","/Users/path/Documents/path/libs/chromedriver");
-		       */
-			     
+			    System.setProperty("webdriver.chrome.driver",f.getAbsolutePath());     
+     
 				 WebDriver driver = new ChromeDriver();
 				 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				 
@@ -39,8 +35,7 @@ import org.testng.annotations.Test;
 				 
 				 Assert.assertEquals(Actual, Expected);
 				 System.out.println( "The URL for this site is " + Actual);
-				 
-				
+			
 			}
 				 
 			
