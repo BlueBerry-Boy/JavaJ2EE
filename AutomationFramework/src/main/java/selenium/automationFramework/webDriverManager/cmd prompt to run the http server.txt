@@ -1,0 +1,18 @@
+Using WebDriverManager as a fat-jar. For instance:
+java -jar webdrivermanager-3.1.1-fat.jar server
+
+[INFO] WebDriverManager server listening on port 4041
+
+
+When the WebDriverManager is up and running, HTTP request can be done to resolve driver binaries (chromedriver, geckodriver, etc.). For instance, supposing that WebDriverManager is running the local host and in the default port:
+
+http://localhost:4041/chromedriver : To download the latest version of chromedriver
+http://localhost:4041/firefoxdriver : To download the latest version of geckodriver
+http://localhost:4041/operadriver : To download the latest version of operadriver
+http://localhost:4041/phantomjs : To download the latest version of phantomjs driver
+http://localhost:4041/edgedriver : To download the latest version of MicrosoftWebDriver
+http://localhost:4041/iedriver : To download the latest version of IEDriverServer
+These requests can be done using a normal browser. The driver binary is automatically downloaded by the browser since it is sent as an attachment in the HTTP response.
+
+
+https://github.com/bonigarcia/webdrivermanager#webdrivermanager-server
