@@ -1,24 +1,35 @@
 package selenium.automationFramework.exceptionHandling;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.io.FileHandler;
+import org.testng.annotations.Test;
 
 	public class tryCatchBlock {
+		
+		@Test
+		public void exceptionhandling() {
 
 		try {
 			//code block;
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 			
-		} catch (IOException e) {
+		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
-	}	
 		
+		
+		
+		try {
+			
+		}catch (Exception e) {
+			e.printStackTrace();	
+		}
+		
+			
+	}	
+}	
 
 
