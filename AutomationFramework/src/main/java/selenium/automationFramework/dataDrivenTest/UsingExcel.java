@@ -1,8 +1,12 @@
 package selenium.automationFramework.dataDrivenTest;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -14,25 +18,42 @@ import selenium.automationFramework.dataDrivenTest.Constants;
 
 public class UsingExcel {
 
+	/**
+	 * 1.Set the URL, File Path, & File Name/Excel WorkBook name in the constants class
+	 * 2.setup the name of the sheet in line 38 ("IDs")
+	 * 3.write the name of the tablename (boundary cells) in line 43 ("Logins")
+	 * 
+	 */
+	
+	
 	private WebDriver driver;
 
 	@BeforeClass
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
 		
-		// Maximize the browser's window
+		File f = new File("geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", f.getAbsolutePath());
+		
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(Constants.URL);
+		
+//		WebElement e = driver.findElement(By.xpath("/html/body/div/div/div[5]/div/div/div[2]/div/div[2]/div[2]/svg"));
+//		if(e.isDisplayed()) {
+//			e.click();
+//			}
+		
 		driver.findElement(By.xpath("//span[text()='Learn Now']")).click();
+		
 		// Tell the code about the location of Excel file
 		//File_Name=Sheet Name in Excel workbook
-		Excelutility.setExcelFile(Constants.File_Path + Constants.File_Name, "LoginTests");  // "LoginTests" = SheetName
+		Excelutility.setExcelFile(Constants.File_Path + Constants.File_Name, "IDs");  
 	}
 	
 	@DataProvider(name = "loginData")
 	public Object[][] dataProvider() {
-		Object[][] testData = Excelutility.getTestData("Invalid_Login");  // "Invalid_Login" = Boundary cell table name
+		Object[][] testData = Excelutility.getTestData("Logins");  //  Boundary cell table name
 		return testData;
 	}
 
