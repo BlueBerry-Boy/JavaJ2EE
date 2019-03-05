@@ -507,6 +507,10 @@ Password <input type="password"> index 2 //input[2]
 
 
 
+xpath with multiple properties 
+E.g //*[@id='txtPersonalId'and@focus-me='focusInput
+
+driver.findElement(By.xpath("//*[@id='txtPersonalId'and@focus-me='focusInput']")).sendKeys(TestData.UserID3);
 
 
 
