@@ -25,7 +25,7 @@ import org.openqa.selenium.OutputType;
 			TakesScreenshot tsh = (TakesScreenshot)driver;
 			
 			try {
-				FileHandler.copy(tsh.getScreenshotAs(OutputType.FILE), new File("C:\\h2kinfosyshomepage.jpg"));
+				FileHandler.copy(tsh.getScreenshotAs(OutputType.FILE), new File("C:\\picture.jpg"));
 			} catch (WebDriverException e) {
 				
 				//e.printStackTrace();
