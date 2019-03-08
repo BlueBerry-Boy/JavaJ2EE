@@ -53,5 +53,7 @@ import org.testng.annotations.Test;
 				driver.quit();
 			}
 	
-	
+				//Actions action = new Actions(driver);
+				//action.sendKeys(Keys.ARROW_DOWN);
+				//action.perform();
 }
