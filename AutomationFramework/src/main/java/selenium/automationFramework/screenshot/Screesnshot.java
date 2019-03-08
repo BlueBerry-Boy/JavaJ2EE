@@ -14,6 +14,15 @@ import java.io.File;
 import java.io.IOException;
 import org.openqa.selenium.OutputType;
 
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
 
 	public class Screesnshot {
 
