@@ -240,6 +240,12 @@ Xpath Text Function:
 
 
 
+Examples:
+//input[contains(@value,'Continue')]
+
+//div[@class='buttonPanel vs8']//input[contains(@value,'Continue')]
+
+
 WebElement e = driver.findElement(By.xpath('//span[contains(text(),'Share')]'));
 String actual= e.getText();
 String expected='';
@@ -250,7 +256,6 @@ if(actual.equals(expected))
     syso(Its working as expected);
 
 }
-
 
 Handling Dynamic Elements in xpath:
 ----------------------------------------
