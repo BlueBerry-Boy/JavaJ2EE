@@ -234,7 +234,7 @@ Xpath Text Function:
 ----------------------
 //span[text()=" Share what's new "]  //Exact Text
 
-
+//option[contains(text(),'Checking - 6000 Avail')]  // partial text
 
 //span[contains(text(),'Share')]     //Part of Text or Substring of Text
 
