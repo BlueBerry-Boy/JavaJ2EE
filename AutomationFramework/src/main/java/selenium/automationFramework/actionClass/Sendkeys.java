@@ -56,4 +56,12 @@ import org.testng.annotations.Test;
 				//Actions action = new Actions(driver);
 				//action.sendKeys(Keys.ARROW_DOWN);
 				//action.perform();
+			
+			// actions to click on a WebElement
+			//element= driver.findElement(By.xpath("//a[@class='ui-selectmenu-status'][contains(text(),'Checking - 2818 Avail')]"));
+				
+			//Actions action = new Actions(driver);
+			//action.moveToElement(element).click().perform();
+
+		
 }
