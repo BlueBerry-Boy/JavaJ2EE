@@ -38,4 +38,12 @@ public class Handling_multiple_windows {
 			
 	}
 
+	//switching to a new tab
+	 psdbComponent.clickDocumentLink();
+         ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+ 	 driver.switchTo().window(tabs2.get(1));
+   	 driver.close();
+   	 driver.switchTo().window(tabs2.get(0));
+	
+	
 }
